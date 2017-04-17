@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Bootstrap -->
+  <script type="text/javascript" src="style/jquery/jquery-ui.min.css"></script>
+  <link href="style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+  <title>Restaurant Reservation Dashboard</title>
+</head>
+<body>
+
+  <div class="container main-container"> <!-- START PAGE CONTAINER -->
+
+    <div class="row nav-row"> <!-- START NAVIGATION ROW-->
+
+      <div class="col-xs-4">
+        <nav>
+          <ul class="nav nav-tabs nav-list">
+            <li role="presentation" class="blue"><a href="#">Create new</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-xs-8 btns-col">
+        <nav>
+          <ul class="nav nav-tabs nav-list">
+            <li role="presentation" class="activeable"><a href="#">Reservation</a></li>
+            <li role="presentation" class="activeable"><a href="#">Walk-in</a></li>
+            <li class="pull-right"><img class="plus-button" src="img/X-icon.png"/> <li>
+          </ul>
+        </nav>
+      </div>
+
+      <form>  <!-- START SEARCH-->
+        <div class="col-xs-12 search-row">
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-default plus-button" type="button"><img src="img/Search-icon.png"/></button>
+            </span>
+
+            <input type="text" class="form-control" name="search" placeholder="Search by guest name or mobile"/>
+
+            <span class="input-group-btn">
+              <button class="btn btn-default plus-button" type="button"><img src="img/Plus-icon.png"/> </button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </form> <!-- END SEARCH-->
+
+    </div> <!-- END NAVIGATION ROW-->
+
+    <form class="container">
+      <div class="row"> <!-- START ROW-->
+        <div class="col-xs-4 res-details-col"> <!-- START RESERVATION DETAILS -->
+          <h2> RESERVATION DETAILS </h2>
+
+          <div class="form-inline">
+
+            <div class="form-group"> <!-- START DATE -->
+              <label class="sr-only" for="dateInput">Date</label>
+              <div class="input-group">
+                <div class="input-group-addon">Date</div>
+                <input type="text" class="form-control datepicker" value="Wed, Jun 16">
+                <div class="input-group-btn">
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                </div>
+              </div>
+            </div> <!-- END DATE -->
+
+            <div class="form-group"> <!-- START TIME -->
+              <label class="sr-only" for="timeInput">Time</label>
+              <div class="input-group">
+                <div class="input-group-addon">Time</div>
+                <input type="text" class="form-control datepicker" value="08:15 PM">
+                <div class="input-group-btn">
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                </div>
+              </div>
+            </div> <!-- END TIME -->
+
+            <div class="form-group"> <!-- START COVERS -->
+              <label class="sr-only" for="coversInput">Covers</label>
+              <div class="input-group">
+                <div class="input-group-addon">Covers</div>
+                <input type="text" class="form-control datepicker" value="11">
+                <div class="input-group-btn">
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                </div>
+              </div>
+            </div> <!-- END COVERS -->
+
+            <div class="form-group"> <!-- START TAT -->
+              <label class="sr-only" for="tatInput">Tat</label>
+              <div class="input-group">
+                <div class="input-group-addon">Tat</div>
+                <input type="text" class="form-control datepicker" value="01:30h">
+                <div class="input-group-btn">
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                  <button class="btn btn-default chevron" type="button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                </div>
+              </div>
+            </div> <!-- END TAT -->
+
+            <div class="form-group"> <!-- START NOTES -->
+              <label class="sr-only" for="notesInput">Notes</label>
+              <div class="input-group">
+                <div class="input-group-addon" id="notesAddon">Notes</div>
+                <p id="noteArea">
+                  Whale is the common name for various marine mamals of the order Cetacea
+                </p>
+              </div>
+            </div> <!-- END NOTES -->
+
+            <div class="form-group"> <!-- START ORIGIN -->
+              <label class="sr-only" for="originInput">Origin</label>
+              <div class="input-group">
+                <div class="input-group-addon" id="originAddon">Origin</div>
+                <div class="input-group-btn origin-btns">
+                  <button class="btn btn-default" type="button">Phone</button>
+                  <button class="btn btn-default" type="button">In-person</button>
+                </div>
+              </div>
+            </div> <!-- END ORIGIN -->
+
+          </div> <!-- END FORM-INLINE -->
+        </div> <!-- END RESERVATION DETAILS -->
+
+        <div class="col-xs-8 table-details-col"> <!-- START TABLE DETAILS -->
+
+          <div>
+            <h2> TABLE DETAILS </h2>
+            <aside class="pull-right">23 TABLES AVAILABLE</aside>
+          </div>
+
+          <div class="input-group table-group">
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Section
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Table type
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Patio</a></li>
+                <li><a href="#">Ground Floor</a></li>
+                <li><a href="#">Terrace</a></li>
+                <li><a href="#">Balcony</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+            <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Table #
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+              </ul>
+            </div><!-- /btn-group -->
+          </div><!-- /input-group -->
+
+          <div class="form-group filters"> <!-- Start filters -->
+            <label class="control-label">Apply filters</label>
+            <div>
+                <!-- <input type="text" class="tagsinput" value="Dinner,Cool"/> -->
+                <span class="filter-btn">Dinner <small>x</small> </span>
+                <span class="filter-btn">Cool <small>x</small> </span>
+                <span class="small-plus"><img width="30px" src="img/Plus-icon.png"/> </span>
+            </div>
+          </div> <!-- End filters -->
+
+          <div class="panel panel-default">
+            <table class="table tables-table"> <!-- Table -->
+              <tr class="table-heading">
+                <th>#</th>
+                <th>Section</th>
+                <th>Type</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Blocked</th>
+                <th></th>
+              </tr>
+              <tr>
+                <td>3A</td>
+                <td>Patio</td>
+                <td>Private dining</td>
+                <td>2</td>
+                <td>4</td>
+                <td>-</td>
+                <td><button type="button"><i class="glyphicon glyphicon-remove"></i></button></td>
+              </tr>
+              <tr>
+                <td>3B</td>
+                <td>Patio</td>
+                <td>Private dining</td>
+                <td>2</td>
+                <td>4</td>
+                <td>VIP</td>
+                <td><button type="button"><i class="glyphicon glyphicon-remove"></i></button></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Ground Floor</td>
+                <td>VIP only</td>
+                <td>4</td>
+                <td>12</td>
+                <td>Owner</td>
+                <td><button type="button"><i class="glyphicon glyphicon-remove"></i></button></td>
+              </tr>
+              <tr>
+                <td>5A</td>
+                <td>Ground Floor</td>
+                <td>VIP only</td>
+                <td>4</td>
+                <td>12</td>
+                <td>-</td>
+                <td><button type="button"><i class="glyphicon glyphicon-remove"></i></button></td>
+              </tr>
+              <tr>
+                <td>5B</td>
+                <td>Ground Floor</td>
+                <td>Open table</td>
+                <td>4</td>
+                <td>15</td>
+                <td>-</td>
+                <td><button type="button"><i class="glyphicon glyphicon-remove"></i></button></td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Terrace</td>
+                <td>Open table</td>
+                <td>1</td>
+                <td>4</td>
+                <td>VIP</td>
+                <td><button type="button"><i class="glyphicon glyphicon-remove"></i></button></td>
+              </tr>
+            </table>
+          </div> <!-- End Table -->
+
+        </div> <!-- END TABLE DETAILS -->
+
+      </div> <!-- END ROW-->
+
+      <footer class="row" id='footer-row'> <!-- START FOOTER BTNS -->
+        <div class="pull-right footer-btns">
+          <button class="btn btn-default" type="button">RESET</button>
+          <button class="btn btn-default" type="button">CREATE RESERVATION</button>
+        </div>
+      </footer> <!-- END FOOTER BTNS -->
+
+    </form>
+
+  </div> <!-- END PAGE CONTAINER -->
+
+<script type="text/javascript" src="style/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="style/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="style/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
